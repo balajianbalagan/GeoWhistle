@@ -1,0 +1,1 @@
+.env la mongo podu and frontend la mapbox api podu
