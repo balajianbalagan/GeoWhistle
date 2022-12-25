@@ -30,8 +30,13 @@ const PinSchema = new mongoose.Schema(
       type: Number,
       require: true,
     },
-    image : String,
     
+    image : String,
+    likes : [{
+      type : mongoose.ObjectId,
+      ref : "User",
+      require: false
+    }]
     
   },
   { timestamps: true }

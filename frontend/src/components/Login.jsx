@@ -3,7 +3,7 @@ import axios from "axios";
 import { useRef, useState } from "react";
 import "./login.css";
 
-export default function Login({setShowLogin, myStorage, setCurrentUser}) {
+export default function Login({setShowLogin, myStorage, setCurrentUser,setCurrentUid}) {
   const [error, setError] = useState(false);
 
   const nameRef = useRef();
@@ -19,7 +19,9 @@ export default function Login({setShowLogin, myStorage, setCurrentUser}) {
       try {
         const res = await axios.post("/users/login", user);
         myStorage.setItem("user", res.data.username);
+        myStorage.setItem("userid", res.data._id);
         setCurrentUser(res.data.username);
+        setCurrentUid(res.data._id);
         setShowLogin(false);
         setError(false);
       } catch (err) {
@@ -30,7 +32,7 @@ export default function Login({setShowLogin, myStorage, setCurrentUser}) {
   return (
     <div className="loginContainer">
       <div className="logo">
-        <Room /> BQTPin
+        <Room /> Login
       </div>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="username" ref={nameRef}/>

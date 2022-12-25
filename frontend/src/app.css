@@ -1,11 +1,19 @@
 .card {
     width: 250px;
     height: 350px;
+    padding: 35px 10px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-
+.likeunlike{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 label {
     width: max-content;
     color: tomato;
@@ -56,7 +64,38 @@ input::placeholder, textarea::placeholder {
     background-color: tomato;
     cursor: pointer;
 }
-
+.LikeButton {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(18, 148, 255);
+    cursor: pointer;
+}
+.DislikeButton {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(255, 18, 18);
+    cursor: pointer;
+}
+.LikeButton1 {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(18, 148, 255);
+    background-color: rgb(229, 229, 229);
+    cursor: pointer;
+}
+.DislikeButton1 {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(255, 18, 18);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
 .button {
     border: none;
     padding: 5px;
